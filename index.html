@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SM EAGLE – Required Shipyard Conditions (Prototype 1)</title>
+<style>
+:root {
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --text-muted: #5a5a5a;
+  --accent: #0d47a1;
+  --accent-soft: #e3f2fd;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.wrapper {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 32px 64px;
+  background: var(--card-bg);
+  box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+
+h1 { font-size: 1.75rem; color: var(--accent); font-weight: 600; letter-spacing: -0.02em; }
+h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: -0.01em;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 80px 24px 100px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cover .company-logo { max-width: 280px; height: auto; display: block; }
+
+/* About Vessel */
+.about-vessel .subtitle { font-weight: 600; color: var(--accent); margin-bottom: 8px; font-size: 1.05rem; }
+.about-vessel .vessel-photo { max-width: 100%; height: auto; display: block; margin: 16px 0; border-radius: 6px; overflow: hidden; }
+.about-vessel .intro { color: var(--text-muted); }
+.about-company .company-name { font-weight: 600; color: var(--accent); margin: 0 0 12px; font-size: 1.05rem; }
+.about-company .intro { color: var(--text-muted); margin-bottom: 20px; }
+.about-vessel-subphotos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 12px 0 16px; max-width: 100%; }
+.about-vessel-subphotos .gallery-item { margin: 0; }
+.about-vessel-subphotos .gallery-item img { width: 100%; height: 160px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border); }
+.about-vessel-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+.about-vessel-gallery .gallery-item { margin: 0; }
+.about-vessel-gallery .gallery-item img { height: 140px; }
+
+/* Tables */
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+th, td { border: 1px solid var(--border); padding: 12px 14px; text-align: left; vertical-align: top; }
+th { background: var(--accent-soft); font-weight: 600; color: var(--accent); }
+tbody tr:nth-child(even) { background: #fafafa; }
+
+/* Lists */
+ul { margin: 12px 0; padding-left: 22px; }
+li { margin: 6px 0; }
+p { margin: 0 0 12px; }
+
+/* Sections */
+section { margin-bottom: 48px; }
+section:last-child { margin-bottom: 0; }
+.page-break { page-break-before: always; }
+.page-break:first-of-type { page-break-before: avoid; }
+
+/* Image galleries */
+.gallery-section { margin-top: 24px; }
+.gallery-title { font-size: 0.95rem; font-weight: 600; color: var(--text-muted); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.gallery-item {
+  background: var(--bg);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.gallery-item img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.gallery-item figcaption {
+  padding: 10px 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Schedule */
+.schedule-note { background: var(--accent-soft); padding: 16px 20px; border-left: 4px solid var(--accent); margin: 16px 0; font-size: 14px; }
+.schedule-example { margin-top: 20px; }
+.schedule-example .schedule-img { max-width: 100%; height: auto; display: block; margin: 12px 0; border-radius: 6px; border: 1px solid var(--border); }
+.schedule-example strong { display: block; margin-bottom: 8px; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+<section class="cover page-break">
+  <img src="SM_KLCSM_logo.png" alt="SM KLCSM" class="company-logo" />
+</section>
+
+<section class="about-company page-break">
+  <h2>About Company</h2>
+  <p class="company-name">KLCSM</p>
+  <p class="intro">KLCSM is a member of the SM Group and has provided professional total marine solutions since its establishment in 1977, including crew and vessel management, newbuilding supervision, second-hand vessel conversion supervision, ship repair and shipyard operations, and maritime technology consulting. The company currently manages a total of 67 vessels, including 14 LNG carriers (LNGCs).</p>
+  <div class="about-vessel-gallery gallery">
+    <figure class="gallery-item">
+      <img src="about_lngc_card.png" alt="LNG Carrier – Total Management" />
+    </figure>
+    <figure class="gallery-item">
+      <img src="about_drydock.png" alt="LNGC in dry dock" />
+    </figure>
+    <figure class="gallery-item">
+      <img src="about_routes.png" alt="Dedicated Carrier Service Routes" />
+    </figure>
+  </div>
+</section>
+
+<section class="about-vessel page-break">
+  <h2>About Vessel</h2>
+  <img src="SM_EAGLE_ship.png" alt="SM EAGLE" class="vessel-photo" />
+  <div class="about-vessel-subphotos gallery">
+    <figure class="gallery-item"><img src="about_ship_1.png" alt="SM EAGLE" /></figure>
+    <figure class="gallery-item"><img src="about_ship_2.png" alt="SM EAGLE" /></figure>
+    <figure class="gallery-item"><img src="about_ship_3.png" alt="SM EAGLE" /></figure>
+  </div>
+  <p class="subtitle">KOREA LINE CORP. 174,000 m³ LNG CARRIER, SM EAGLE</p>
+</section>
+
+<section class="page-break">
+  <h2>Ship Specification</h2>
+  <p><strong>PRINCIPAL DIMENSIONS (SM EAGLE)</strong></p>
+  <table>
+    <thead><tr><th>Item</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td>LENGTH O. A.</td><td>295.50 m (approx.)</td></tr>
+      <tr><td>LENGTH B. P.</td><td>283.50 m</td></tr>
+      <tr><td>BREADTH (MLD)</td><td>46.40 m</td></tr>
+      <tr><td>DEPTH (MLD)</td><td>26.50 m</td></tr>
+      <tr><td>DRAFT DESIGN (MLD)</td><td>11.70 m</td></tr>
+      <tr><td>DRAFT SCANT. (MLD)</td><td>12.70 m</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="page-break">
+  <h2>Required Environment</h2>
+  <p>The shipyard must meet the following conditions.</p>
+  <ul>
+    <li>Shipyard worker: Over 2,200 own employees, over 6,000 sub-employees</li>
+    <li>Current capability: Annual repair of over 500 vessels</li>
+    <li>At least 2 cranes per berth</li>
+    <li>At least 4 cranes per dry dock</li>
+    <li>No double banking</li>
+  </ul>
+  <p><em>Shipyard worker and current capability are based on Xinya Shipyard as reference.</em></p>
+</section>
+
+<section class="page-break">
+  <h2>Required Facilities</h2>
+  <p>Facility requirements that a shipyard must meet for docking and repair of SM EAGLE. (Based on Xinya Shipyard facilities; where another shipyard offers better spec for the same facility, that spec is adopted. Facilities not available at Xinya are included from other shipyards.)</p>
+
+  <div class="gallery-section">
+    <p class="gallery-title">Facilities for LNGC – Examples</p>
+    <div class="gallery">
+      <figure class="gallery-item">
+        <img src="Facilities for LNGC examples/Cleaning Workshop.jpg" alt="Cleaning Workshop" />
+        <figcaption>Cleaning Workshop</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Facilities for LNGC examples/Cryogenic Workshop.jpg" alt="Cryogenic Workshop" />
+        <figcaption>Cryogenic Workshop</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Facilities for LNGC examples/Cryogenic Workshop (2).jpg" alt="Cryogenic Workshop" />
+        <figcaption>Cryogenic Workshop</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Facilities for LNGC examples/Nitrogen storage and vaporizing station.jpg" alt="Nitrogen storage and vaporizing station" />
+        <figcaption>Nitrogen storage and vaporizing station</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Facilities for LNGC examples/SUS Piping Workshop.jpg" alt="SUS Piping Workshop" />
+        <figcaption>SUS Piping Workshop</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Facilities for LNGC examples/Variable Frequency Shore Power.jpg" alt="Variable Frequency Shore Power" />
+        <figcaption>Variable Frequency Shore Power</figcaption>
+      </figure>
+    </div>
+
+    <p class="gallery-title">Equipment – Examples</p>
+    <div class="gallery">
+      <figure class="gallery-item">
+        <img src="Equipment examples/Cherry Picker.jpg" alt="Cherry Picker" />
+        <figcaption>Cherry Picker</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Cradle of Cryogenic Cargo Pump.jpg" alt="Cradle of Cryogenic Cargo Pump" />
+        <figcaption>Cradle of Cryogenic Cargo Pump</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Cryogenic Material Hardness Test.jpg" alt="Cryogenic Material Hardness Test" />
+        <figcaption>Cryogenic Material Hardness Test</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Dehumidifier for cargo tank.jpg" alt="Dehumidifier for cargo tank" />
+        <figcaption>Dehumidifier for cargo tank</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Dog House for Cargo Tank Entrance.jpg" alt="Dog House for Cargo Tank Entrance" />
+        <figcaption>Dog House for Cargo Tank Entrance</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Electric chain block for Cargo Pumps.jpg" alt="Electric chain block for Cargo Pumps" />
+        <figcaption>Electric chain block for Cargo Pumps</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Large-Scale Balancing Machine.jpg" alt="Large-Scale Balancing Machine" />
+        <figcaption>Large-Scale Balancing Machine</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment%20examples/Low%20Voltage%20%26%20Phase%20Tester.jpg" alt="Low Voltage & Phase Tester" />
+        <figcaption>Low Voltage & Phase Tester</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Material Composition Analysis.jpg" alt="Material Composition Analysis" />
+        <figcaption>Material Composition Analysis</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment%20examples/Portable%20winch%20for%20material%20%26%20tools.jpg" alt="Portable winch for material & tools" />
+        <figcaption>Portable winch for material & tools</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Valve Testing Tables.jpg" alt="Valve Testing Tables" />
+        <figcaption>Valve Testing Tables</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="Equipment examples/Yard Own Tugboat.jpg" alt="Yard Own Tugboat" />
+        <figcaption>Yard Own Tugboat</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <h3 style="font-size:1.1rem; margin:28px 0 12px;">Facility list (specifications)</h3>
+  <table>
+    <thead><tr><th>Category</th><th>Item</th><th>Specifications / Details</th></tr></thead>
+    <tbody>
+      <tr><td>Facilities for LNGC</td><td>Assembly Shop</td><td>Area 454m x 100m x 33m, Plasma steel cutting machines 4 sets, Man. gas machine 3 sets, Overhead cranes 10t, 50t, 120t</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Bonded warehouse</td><td>300 m², Customs support, clearance within two days</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Cleaning Workshop</td><td>Over 1,000 m², 3 tons O/H Crane, Length 27m, Breadth 13m*2, Height 12m, Gantry Crane Capa. 5T*3sets, 3T*1set, Ht of Crane Hook 9.0m</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Cryogenic Workshop</td><td>Over 648 m², 5 tons O/H Crane, Length 27m, Breadth 13m*2, Height 12m, Gantry Crane Capa. 5T*3sets, 3T*1set, Ht of Crane Hook 9.0m</td></tr>
+      <tr><td>Facilities for LNGC</td><td>General Workshop</td><td>10 tons O/H Crane</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Integrated Workshop</td><td>8,400 m² sheltered, structural, piping, mechanical, electrical, near dry dock</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Module & Steel Workshop</td><td>2 x 25-ton overhead cranes, high-precision steel fabrication, modules, blocks</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Nitrogen storage and vaporizing station</td><td>Liquid Storage Tank 100T x 3, Evaporation Capa. 2,000 m³/h x 3</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Outfitting Shop</td><td>150m x 25m x 33m, Overhead crane 5 tons x 6 sets</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Painting Workshop</td><td>Blasting shop 50mx50mx17m x 1shop, Painting shop 50mx50mx17m x 5shop</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Variable Frequency Shore Power</td><td>Voltage: 440V~690V, Capacity: Max. 2,000KVA</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Cradle of Cryogenic Cargo Pump</td><td>—</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Cryogenic Material Hardness Test</td><td>—</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Mechanical & Electrical Workshop</td><td>—</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Piping Workshop</td><td>—</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Stainless Workshop</td><td>—</td></tr>
+      <tr><td>Facilities for LNGC</td><td>Steel Workshop</td><td>—</td></tr>
+      <tr><td>Facilities for LNGC</td><td>SUS Piping Workshop</td><td>—</td></tr>
+      <tr><td>Equipment</td><td>Cherry Picker</td><td>Over 196 pcs</td></tr>
+      <tr><td>Equipment</td><td>Cargo pump (LNG/LPG) testing station</td><td>Electrical 220V–450V Power export</td></tr>
+      <tr><td>Equipment</td><td>Dehumidifier for cargo tank</td><td>12000 m³/h special fresh air dehumidifier</td></tr>
+      <tr><td>Equipment</td><td>Electric chain block for Cargo Pumps</td><td>5 Ton, Height 50m</td></tr>
+      <tr><td>Equipment</td><td>Low Voltage & Phase Tester</td><td>50/60Hz, 380/440V, 150KW, 0–380V</td></tr>
+      <tr><td>Equipment</td><td>Other</td><td>Cryogenic, painting/blasting, storage, office</td></tr>
+      <tr><td>Equipment</td><td>Portable winch for material & tools</td><td>Capa. 300kg, Ht 50m</td></tr>
+      <tr><td>Equipment</td><td>Quay & yard cranes</td><td>Quay cranes up to 45 T, dock/yard cranes</td></tr>
+      <tr><td>Equipment</td><td>Valve Testing Tables</td><td>Cargo system 5kg, Steam system 90kg</td></tr>
+      <tr><td>Equipment</td><td>Yard Own Tugboat</td><td>6000PS*1, 5000PS*2, 4000PS*2, 3600PS*1</td></tr>
+      <tr><td>Equipment</td><td>Customized Wooden Protection of Cargo Tank</td><td>—</td></tr>
+      <tr><td>Equipment</td><td>Dog House for Cargo Tank Entrance</td><td>—</td></tr>
+      <tr><td>Equipment</td><td>Large-Scale Balancing Machine</td><td>—</td></tr>
+      <tr><td>Equipment</td><td>Material Composition Analysis</td><td>—</td></tr>
+      <tr><td>Equipment</td><td>Warehouse</td><td>—</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="page-break">
+  <h2>Master Schedule (Example)</h2>
+  <p>The shipyard must be able to prepare and present a Master Schedule in the format shown below.</p>
+  <p>A schedule outlining the type, sequence, and duration of work to be carried out after the vessel docks.</p>
+  <div class="schedule-example">
+    <p><strong>Example</strong></p>
+    <img src="Master_Schedule_1.jpg" alt="Master Schedule Example 1" class="schedule-img" />
+    <img src="Master_Schedule_2.jpg" alt="Master Schedule Example 2" class="schedule-img" />
+  </div>
+</section>
+
+</div>
+
+</body>
+</html>
